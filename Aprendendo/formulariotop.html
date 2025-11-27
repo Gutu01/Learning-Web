@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head> <meta charset="utf-8">
+    <title>FORMULÁRIO</title>
+    </head>
+
+    <body>
+        <form>
+            <fieldset>
+                <legend>CADASTRO</legend>
+
+                <label for="nome">Nome:</label>
+                <!-- O required faz ser um campo obrigatório. -->
+                <input type="text" maxlength="100" id="nome" required><br>
+
+                <label for="e-mail">E-mail:</label>
+                <input type="email" minlength="10" id="e-mail" required><br>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" minlength="15" id="telefone" required><br>
+
+                <label for="aniversario">Aniversário:</label>
+                <input type="date" maxlength="7" id="aniversario" required><br>
+
+                <label for="texto">Texto:</label>
+                <!-- O cols delimita até quantas colunas podem ser digitadas e rows até quantas linhas podem ser digitadas-->
+                <textarea type="text" id="texto" cols="30" rows="1"></textarea><br>
+                <!-- O value faz aparecer a mensagem enviar no botão. -->
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </body>
+</html>
