@@ -3,7 +3,30 @@
     <head>
         <meta charset="utf-8">
         <style>
+            #container{
+                /* O backgroud é o fundo de trás. No caso, se só colocar ele, ele ficará  só um quadrado cinza */
+                background: #ccc;
+                /* O width 960px determina que o backgroud (que é o fundo cinza) terá essa quantidade de pixels. */
+                width: 960px;
+                /* O margin 0 serve centralizar o item, porém ele precisa saber o tamanho em px do item. Assim como é mostrado acima. */
+                margin: 0 auto;
+                /* O padding é o afastamento interno que faz uma borda para separar o texto e itens dentro do background. */ 
+                padding: 10px;
+            }
 
+            .texto-destaque{
+                /* O font-weight modifica a espessura da fonte. Pode ser negrito, normal, leve, super negrito... */
+                font-weight: bold;
+            }
+
+            /* Essa chamada define que toda lista que tenha ul li como composição seja alterada. */
+            ul li{
+                /* O list-style denomina o estilo da lista, se eu colocar none ele remove os pontos que foram colocados. */
+                list-style: none;
+                /* O margin-bottom determina quantos px terá o espaçamento entre linhas. */
+                margin-bottom: 5px;
+                /* Aqui também posso adicionar um display: inline. o inline deixa os elementos seguidos um do outro, enquanto que o display diz como o elemento deve se comportar na página. */
+            }
         </style>
     </head>
 
@@ -11,7 +34,8 @@
         <!-- Essa tag div servirá como container. -->
         <div id="container">
             <h1>Título Principal</h1>
-            <p>Texto ao qual o texto se refere</p>
+            <!-- O class é para sinalizar a classe que foi criada no style lá em cima. No caso bold é igual a negrito. -->
+            <p class="texto-destaque">Texto ao qual o texto se refere</p>
             <ul>
                 <li>Item 1</li>
                 <li>Item 2</li>
