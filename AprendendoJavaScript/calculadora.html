@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+
+    <form>
+        <!-- Só para relembrar, o label é para associar um texto dicertativo a um input. -->
+        <label> Valor A</label> <input type="number" id="v1"/>
+        <label> Valor B</label> <input type="number" id="v2"/>
+        <label>Operação</label>
+        <select id="oper">
+            <option>Soma</option>
+            <option>Subtrair</option>
+            <option>Multiplicar</option>
+            <option>Divisão</option>
+            <option>potência</option>
+        </select>
+        <a href="#" onclick="executar()">Executar</a>
+    </form>
+
+    <div id="resp">O resultado aparece aqui</div>
+</body>
+</html>
+
+<!-- Biblioteca nescessário para a operação -->
+<script src="calculadora.js"></script>
+
+<script>
+    const executar = () => {
+        // Aqui ele pega os elementos v1 e v2 do documento. O eval está transformando o texto em número
+        const a = eval(document.getElementById("v1").value);
+        const b = eval(document.getElementById("v2").value);
+        // Essa linha serve para puxar o indice da operação selecionada para usar posteriormente ali em baixo para o if
+        let oper = eval(document.getElementById("oper").selectedIndex);
+        // Basicamente aqui em baixo faz o if compacto. Tudo que vem antes do ? é a contiçã e o que vêm depois é o que acontece se for verdadeiro a condição.
+        let resultado = (oper==0)?somar(a,b): (oper==1)?subtrair(a,b): (oper==2)?multiplicar(a,b): (oper==3)?dividir(a,b): exponencial(a,b);
+        // Aqui armazena o resultado na trabalha resp
+        document.getElementById("resp").innerHTML = `O resultado da operação é ${resultado}`;
+    }
+</script>

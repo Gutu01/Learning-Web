@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>API de Testes httpbin</h1>
+        <form>
+            <label>Nome</label>
+            <input type="text" id="d1"/>
+            <!-- Esse # no href aponta para o próprio arquivo. :) -->
+            <a href="#" onclick="executar()">Executar</a>
+
+        </form>
+        <div id="retorno"></div>
+
+        <script src="ajax.js"></script>
+
+            <script>
+                const executar = () => {
+                    const nome = document.getElementById("d1").value;
+                    ajax(nome,"retorno");
+                }
+            </script>
+    </body>
+</html>

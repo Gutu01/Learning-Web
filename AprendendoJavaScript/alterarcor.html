@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="d1">Conteúdo original</div>
+        <button onclick="alterar()">Clique aqui</button>
+
+        <script>
+            /* Nessa linha é criada a função com o nome alterar, sendo constante. Ela será ativa pelo simbolo() e o => aponta pra estrutura dela. */
+            const alterar = () =>{
+                /* Nessa linha o método document.getElementByID procura por elementos que possuem o ID d1. O document referice a toda a página. E o let d1 cria uma variável chamada d1. */
+                let d1 = document.getElementById("d1");
+                /* Essa parte troca o texto escrito dentro do elemento. O innerHTML é a propriedade que guarda  o conteúdo HTML interno da div. Ao colocar = você está está alteradno o conteúdo que está escrito por um novo. */
+                d1.innerHTML="Conteúdo Alterado";
+                /* Muda a cor do plano de fundo do elemento. O style acessa a propriedade CSS do elemento. Em JavaScript se usa backgroundColor em vez de background-color por conta do "calme case" que, em vez de colocar o - e o que vem depois, ele faz tirar o - e colocar letra maiúscula no segundo item. */
+                d1.style.backgroundColor="yellow";
+            }
+        </script>
+
+    </body>
+</html>
